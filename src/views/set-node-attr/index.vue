@@ -113,14 +113,14 @@ const data_model = ref<any>({
 const openTest = () => {
   svgPreviewRef.value
     ?.setNodeAttrByID('circuit-breakerCkjuZ7Ql9C', 'state.OnOff.default', true)
-    .then((res) => {
+    .then((res: any) => {
       console.log(res);
     });
 };
 const closeTest = () => {
   svgPreviewRef.value
     ?.setNodeAttrByID('circuit-breakerCkjuZ7Ql9C', 'state.OnOff.default', false)
-    .then((res) => {
+    .then((res: any) => {
       console.log(res);
     });
 };
