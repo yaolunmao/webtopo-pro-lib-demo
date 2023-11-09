@@ -16,16 +16,30 @@
       </el-popover>
     </div>
     <div class="flex justify-center mt-80px">
-      <el-card class="w-1/2">
+      <el-card class="w-3/4">
         <template #header>
           <div class="card-header">
             <span>提示</span>
           </div>
         </template>
         <div class="flex justify-center">
-          webtopo-svg-edit-pro插件版可免费使用，当前demo下载地址<a class="mx-2 hover:text-blue-400" href="https://github.com/yaolunmao/webtopo-pro-lib-demo"
+          webtopo-svg-edit-pro插件版可免费使用，当前demo下载地址<a class="mx-2 hover:text-blue-400"
+            href="https://github.com/yaolunmao/webtopo-pro-lib-demo"
             target="_blank">https://github.com/yaolunmao/webtopo-pro-lib-demo</a>
         </div>
+      </el-card>
+    </div>
+    <div class="flex justify-center mt-20px">
+      <el-card class="w-3/4">
+        <template #header>
+          <div class="card-header">
+            <span>pro源码购买</span>
+          </div>
+        </template>
+        <div class="flex justify-center">
+          <img src="/wechat.jpg" class="w-3/19 h-3/19" />
+        </div>
+        <div>添加我请备注来意，谢谢！</div>
       </el-card>
     </div>
     <div class="w-[calc(100%)] h-40px bottom-el-footer absolute bottom-10px">
@@ -126,6 +140,16 @@ const button_list: IButtonList[] = reactive([
     onClick: () => {
       router.push({
         name: 'custom-event',
+        params: {}
+      });
+    }
+  },
+  {
+    name: '帧动画',
+    title: '演示如何定义帧动画',
+    onClick: () => {
+      router.push({
+        name: 'frame-animation',
         params: {}
       });
     }

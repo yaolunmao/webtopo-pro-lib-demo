@@ -68,6 +68,11 @@ const router = createRouter({
       path: "/preview-v2",
       component: () => import("../views/preview-v2/index.vue"),
     },
+    {
+      name: "frame-animation",
+      path: "/frame-animation",
+      component: () => import("../views/frame-animation/index.vue"),
+    },
   ],
 });
 

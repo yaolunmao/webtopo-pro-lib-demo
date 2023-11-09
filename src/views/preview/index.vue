@@ -1,9 +1,9 @@
 <template>
-  <webtopo-svg-preview-pro ref="svgPreviewRef" :data-model="data_model" :canvas-drag="true"
+  <webtopo-svg-preview-pro ref="svgPreviewRef" :data-model="data_model" :canvas-drag="true" :frame-play="true"
     @on-event-call-back="onEventCallBack"></webtopo-svg-preview-pro>
 </template>
 <script setup lang="ts">
-import { WebtopoSvgPreviewPro  } from 'webtopo-svg-edit-pro';
+import { WebtopoSvgPreviewPro } from 'webtopo-svg-edit-pro';
 import 'webtopo-svg-edit-pro/dist/style.css';
 import type { IDataModel } from '../../types';
 import { type PropType, ref, unref } from 'vue';
@@ -17,7 +17,7 @@ const props = defineProps({
 const route = useRoute();
 const svgPreviewRef = ref<InstanceType<typeof WebtopoSvgPreviewPro>>();
 const data_model = ref<IDataModel | null>(null);
-const onEventCallBack = (type: string, svg_item_id: string,...args: any[]) => {
+const onEventCallBack = (type: string, svg_item_id: string, ...args: any[]) => {
   console.log(`触发了回调事件:回调类型:${type},触发的节点id:${svg_item_id},其他回调参数:${args}`);
 };
 if (props.previewData) {
